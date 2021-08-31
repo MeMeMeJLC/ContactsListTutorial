@@ -4,7 +4,7 @@ import 'package:sevr/sevr.dart';
 void start() async {
   // Log into database
   final db = await Db.create(
-      'mongodb+srv://admin:%l4u7Xfh@cluster0.ytwge.mongodb.net/test?retryWrites=true&w=majority');
+      '');
   await db.open();
 
   final coll = db.collection('contacts');
@@ -42,4 +42,3 @@ void start() async {
   serv.listen(port, callback: () {
     print('Server listening on port: $port');
   });
-}
